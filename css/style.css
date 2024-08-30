@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #333;
+    color: #10ef17;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #231c2f75;
+    color: #fff;
+}
+
+h1 {
+    margin: 0 auto;
+    font-size: 45px;
+}
+
+.container {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #3b3b3b6c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #10ef17;
+    cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
+.masking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff87;
+    padding: 50px;
+    border-radius: 80px;
+    background-image: url(../images/images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-1 {
+    width: 200px;
+    height: 200px;
+    mask-image: url(../images/img1-section2.png);
+    mask-repeat: no-repeat;
+    background-position: left;
+    top: 10px;
+    left: 10px;
+}
+
+.img-2 {
+    width: 200px;
+    height: 200px;
+    mask-image: url(../images/playstation.png);
+    mask-repeat: no-repeat;
+    background-position: left;
+    top: 10px;
+    left: 10px;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+}
+
+.video>video {
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px black;
+    cursor: pointer;
+}
+
+.audio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+}
+
+#audio {
+    width: 600px;
+    height: 80px;
+    border-radius: 30px;
+    background-color: #45a049;
+    background-color: #333;
+    padding: 20px 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF);
+    background-size: 700% 100%;
+    animation: animBG 5s linear infinite;
+}
+
+#audio:hover {
+    background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF);
+    background-size: 700% 100%;
+    background-position: 0% 0%;
+    border-color: #777;
+}
+
+@keyframes animBG {
+    0% {
+        background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF);
+        background-size: 700% 100%;
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.button {
+    margin-top: -25px;
+    background-color: #CFCED2;
+    padding: 5px;
+    border-radius: 20px;
+    width: max-content;
+    display: flex;
+    column-gap: 10px;
+    box-shadow: 5px 3px 20px black;
+}
+
+button {
+    background-color: #10ef17;
+    color: white;
+    padding: 7px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #299e2d;
+}
+
+button:active {
+    transform: scale(0.91);
+}
+
+.overflow {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.overflow h1 {
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.overflow-p1 {
+    width: 700px;
+    text-indent: 45px;
+    line-height: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px 0 0 20px;
+}
+
+.overflow-p2 {
+    width: 700px;
+    text-indent: 45px;
+    line-height: 23px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px 50px 0 50px;
+}
+
+.chekcbox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+#check-1 {
+    appearance: none;
+    width: 80px;
+    height: 40px;
+    background-color: #CFCED2;
+    margin: 0 auto;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+}
+
+#check-1:checked {
+    background-color: #0000FF;
+}
+
+#check-1::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: all 0.5s;
+}
+
+#check-1:hover::before {
+    left: 40px;
+}
+
+#check-1:checked::before {
+    left: 40px;
+    background-color: #00FF00;
+}
+
+h2 {
+    color: #333;
+    font-size: 35px;
+}
+
+.check-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    background-color: #CFCED2;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.toggle-switch {
+    display: flex;
+    background-color: #2c2c2e;
+    border-radius: 15px;
+    padding: 5px;
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.toggle-switch label {
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #8e8e93;
+    cursor: pointer;
+}
+
+.toggle-switch label.active {
+    color: #000;
+}
+
+.toggle-button {
+    position: absolute;
+    background-color: #ffffff68;
+    border-radius: 15px;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: left 0.3s ease;
+}
+
+#toggle-checkbox {
+    display: none;
+}
+
+#toggle-checkbox:checked~.toggle-button {
+    left: 50%;
+}
+
+#toggle-checkbox:checked~label:nth-of-type(2) {
+    color: #fff;
+}
+
+#toggle-checkbox:checked~label:nth-of-type(2).active {
+    color: #fff;
+}
+
+#toggle-checkbox:not(:checked)~label:nth-of-type(1).active {
+    color: #fff;
+}
